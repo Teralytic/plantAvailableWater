@@ -32,9 +32,9 @@ print("VWC18:", VWC18)
 print("VWC36:", VWC36)
 
 # now bring in soil Texture (use carmack soils api for this)
-soilTex6 = "Loamy fine sand"
-soilTex18 = "Loamy fine sand"
-soilTex36 = "Loamy fine sand"
+soilTex6 = "Loam"
+soilTex18 = "Loam"
+soilTex36 = "Loam"
 
 #input texture return Field Capacity; Permanent wilting point, max plant available water, and coeff
 soilTex6Props = soilTex(soilTex6)
@@ -57,6 +57,9 @@ print("MPAW36:",MPAW36)
 # management allowed defecit --> default 50%
 MAD6,MAD18,MAD36 = MPAW6*0.5,MPAW18*0.5,MPAW36*0.5
 #root  depth, constant for now (40cm)
+print("MAD6:",MAD6)
+print("MAD18:",MAD18)
+print("MAD36:",MAD36)
 rootDepth = 40.00
 #management allowed lower limit of soil moisture -- don't go lower than this
 MAL6 = FC6 - (MPAW6*MAD6)
